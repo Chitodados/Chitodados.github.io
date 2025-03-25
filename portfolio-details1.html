@@ -13,9 +13,7 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Questrial:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +24,41 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Definição de uma única fonte para todo o site */
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+    }
+
+    /* Títulos padronizados */
+    h1, h2, h3 {
+      font-weight: 700;
+      color: #222;
+    }
+
+    /* Ajuste dos botões */
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    /* Melhor alinhamento dos botões */
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
@@ -82,11 +115,10 @@
               </div>
 
               <!-- Botões lado a lado -->
-              <div class="d-flex gap-3 mt-4">
-                <a href="https://dashboardstremiosuperstoresales.streamlit.app/" class="btn btn-primary">Acesso o dashboard</a>
-                <a href="https://github.com/Chitodados/Dashboard_Stremio_Superstore_Sales/blob/main/Superstore_Analise_Dashboard.py" class="btn btn-primary">Acesse o código</a>
+              <div class="button-group">
+                <a href="https://dashboardstremiosuperstoresales.streamlit.app/" class="btn btn-primary">Visitar Website</a>
+                <a href="https://github.com/Chitodados/Dashboard_Stremio_Superstore_Sales/blob/main/Superstore_Analise_Dashboard.py" class="btn btn-primary">Código Fonte</a>
                 <a href="https://chitodados.github.io/#portfolio" class="btn btn-primary">Voltar ao Menu Principal</a>
-
               </div>
 
             </div>
@@ -102,7 +134,6 @@
       <div class="social-links d-flex justify-content-center">
         <a href="https://www.linkedin.com/in/lucas-chitolina/"><i class="bi bi-linkedin"></i></a>
         <a href="https://github.com/Chitodados"><i class="bi bi-github"></i></a>
-
       </div>
     </div>
   </footer>
