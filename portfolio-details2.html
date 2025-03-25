@@ -119,11 +119,39 @@
               </div>
 
               <!-- Botões lado a lado -->
+              <!-- Botões lado a lado -->
               <div class="button-group">
-                <a href="https://dashamazonas.streamlit.app/" class="btn btn-primary">Visitar Website</a>
-                <a href="https://github.com/Chitodados/dash_rios/blob/main/webscrapping_dash.py" class="btn btn-primary">Código Fonte</a>
-                <a href="https://chitodados.github.io/#portfolio" class="btn btn-primary">Voltar ao Menu Principal</a>
+                  <a href="https://dashamazonas.streamlit.app/" class="custom-btn">Visitar Website</a>
+                  <a href="https://github.com/Chitodados/dash_rios/blob/main/webscrapping_dash.py" class="custom-btn">Código Fonte</a>
+                  <a href="https://chitodados.github.io/#portfolio" class="custom-btn">Voltar ao Menu Principal</a>
               </div>
+              
+              <style>
+                .button-group {
+                    display: flex;
+                    gap: 15px;
+                    justify-content: center;
+                    margin-top: 20px;
+                }
+              
+                .custom-btn {
+                    background: linear-gradient(135deg, #F5DEB3, #D2B48C); /* Gradiente bege */
+                    color: #4A362A; /* Cor do texto */
+                    text-decoration: none;
+                    font-weight: bold;
+                    padding: 12px 20px;
+                    border-radius: 8px;
+                    transition: all 0.3s ease-in-out;
+                    font-size: 16px;
+                    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+                }
+              
+                .custom-btn:hover {
+                    background: linear-gradient(135deg, #D2B48C, #F5DEB3);
+                    transform: scale(1.05);
+                    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+                }
+              </style>
 
             </div>
           </div>
