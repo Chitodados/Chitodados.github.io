@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Questrial:wght@400&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,28 +26,29 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+</head>
 
-  <!-- =======================================================
-  * Template Name: EasyFolio
-  * Template URL: https://bootstrapmade.com/easyfolio-bootstrap-portfolio-template/
-  * Updated: Feb 21 2025 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+<body>
 
+  <main id="main">
 
+    <!-- Centralizar a introdução -->
+    <div class="container text-center mt-5">
       <div class="title-wrapper">
         <h1>Introdução</h1>
         <p>Este dashboard analisa dados de um varejo fictício (Superstore), incluindo vendas, lucro, descontos e categorias de produtos. 
           Os dados são estruturados com base em pedidos realizados, contendo informações detalhadas sobre transações, clientes e regiões.</p>
       </div>
-    </div><!-- End Page Title -->
+
+      <!-- Botão para voltar ao menu principal -->
+      <div class="mt-4">
+        <a href="https://chitodados.github.io/#portfolio" class="btn btn-primary">Voltar ao Menu Principal</a>
+      </div>
+    </div>
 
     <!-- Portfolio Details Section -->
     <section id="portfolio-details" class="portfolio-details section">
-
       <div class="container" data-aos="fade-up">
-
         <div class="row gy-4 g-lg-5">
           <div class="col-lg-6">
             <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid mb-4" alt="">
@@ -55,51 +56,47 @@
           </div>
 
           <div class="col-lg-6">
-
             <div class="position-sticky" style="top: 40px">
               <div class="portfolio-description">
                 <h2>Foco nas colunas utilizadas na análise e métricas:</h2>
-                <p>
-                  <p>Vendas: em valor;</p>
-                  <p>Lucro: Resultado financeiro líquido;</p>
-                  <p>Margem de Lucro: Razão entre lucro e vendas;</p>
-                  <p>Descontos: Impacto nas estratégias de preço;</p>
-                  <p>Categorias e Subcat.: Segmentação dos produtos.</p>
-              </p>
+                <ul>
+                  <li><strong>Vendas:</strong> em valor</li>
+                  <li><strong>Lucro:</strong> Resultado financeiro líquido</li>
+                  <li><strong>Margem de Lucro:</strong> Razão entre lucro e vendas</li>
+                  <li><strong>Descontos:</strong> Impacto nas estratégias de preço</li>
+                  <li><strong>Categorias e Subcat.:</strong> Segmentação dos produtos</li>
+                </ul>
 
-                <p>
-                  <h2>Este dashboard fornece insights estratégicos para otimização das operações de varejo, tais como:</h2>
-                  <p>Identificação de padrões de compra para melhorar a segmentação de clientes;</p>
-                  <p>Análise da relação entre descontos e lucro;</p>
-                  <p>Entendimento do desempenho de produtos (nível cat e subcat.);</p>
-                  <p>Avaliação geográfica das vendas. </p>
+                <h2>Este dashboard fornece insights estratégicos para otimização das operações de varejo, tais como:</h2>
+                <ul>
+                  <li>Identificação de padrões de compra para melhorar a segmentação de clientes</li>
+                  <li>Análise da relação entre descontos e lucro</li>
+                  <li>Entendimento do desempenho de produtos (nível cat e subcat.)</li>
+                  <li>Avaliação geográfica das vendas</li>
+                </ul>
               </div>
 
               <div class="portfolio-info mt-5">
-                <h3>Project information</h3>
+                <h3>Informações do Projeto</h3>
                 <ul>
-                  <li><strong>Category</strong> Web design</li>
-                  <li><strong>Client</strong> ASU Company</li>
-                  <li><strong>Data do Projeto</strong> 01 March, 2020</li>
-                  <li><strong>Acesse o Dashboard</strong> <a href="#">https://dashboardstremiosuperstoresales.streamlit.app/</a></li>
+                  <li><strong>Categoria:</strong> Web design</li>
+                  <li><strong>Cliente:</strong> ASU Company</li>
+                  <li><strong>Data do Projeto:</strong> 01 March, 2020</li>
+                  <li><strong>Acesse o Dashboard:</strong> <a href="#">https://dashboardstremiosuperstoresales.streamlit.app/</a></li>
                   <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
-
-    </section><!-- /Portfolio Details Section -->
+    </section>
 
   </main>
 
   <footer id="footer" class="footer">
-
     <div class="container">
-      <div class="copyright text-center ">
+      <div class="copyright text-center">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">EasyFolio</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
@@ -109,14 +106,9 @@
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
