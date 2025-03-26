@@ -1,60 +1,68 @@
-<section id="funcionamento" class="portfolio-details section">
+<section id="funcionamento" class="portfolio-details section py-5">
   <div class="container" data-aos="fade-up">
     <div class="row gy-4 g-lg-5">
+      
+      <!-- Espaço para Imagem -->
+      <div class="col-lg-12 text-center">
+        <img src="assets/img/banner.png" class="img-fluid rounded shadow-lg" alt="Imagem Ilustrativa">
+        <p class="mt-2"><em>Imagem ilustrativa do processo de redistribuição</em></p>
+      </div>
+
       <div class="col-lg-12">
         <div class="portfolio-description">
-          <h2>Como Funciona</h2>
-          <h3>Leitura de Dados</h3>
+          <h2 class="text-primary">Como Funciona</h2>
+          
+          <h3 class="mt-4 text-secondary">Leitura de Dados</h3>
           <p>O código começa com a leitura de várias fontes de dados:</p>
-          <ul>
-            <li>Venda de materiais nos últimos 3 meses por filial.</li>
-            <li>Informações sobre clusters das filiais.</li>
-            <li>Estoque disponível em cada filial, incluindo o estoque atual e em pedido.</li>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Venda de materiais nos últimos 3 meses por filial.</li>
+            <li class="list-group-item">Informações sobre clusters das filiais.</li>
+            <li class="list-group-item">Estoque disponível em cada filial, incluindo o estoque atual e em pedido.</li>
           </ul>
 
-          <h3>Cálculo da Necessidade de Estoque</h3>
+          <h3 class="mt-4 text-secondary">Cálculo da Necessidade de Estoque</h3>
           <p>Para cada filial do Cluster 1, calcula-se a quantidade de estoque necessária para atender à demanda pelos próximos 7 meses, com base na venda média mensal e no estoque disponível.</p>
 
-          <h3>Redistribuição de Estoque</h3>
-          <ul>
-            <li>O estoque disponível em filiais de clusters inferiores (Cluster 2, 3, etc.) é calculado e somado.</li>
-            <li>Esse estoque é redistribuído para as filiais do Cluster 1, com prioridade para as lojas com maior venda.</li>
-            <li>O estoque é diminuído progressivamente à medida que é alocado para cada filial, garantindo que não haja alocação de estoque superior ao disponível.</li>
+          <h3 class="mt-4 text-secondary">Redistribuição de Estoque</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">O estoque disponível em filiais de clusters inferiores (Cluster 2, 3, etc.) é calculado e somado.</li>
+            <li class="list-group-item">Esse estoque é redistribuído para as filiais do Cluster 1, com prioridade para as lojas com maior venda.</li>
+            <li class="list-group-item">O estoque é diminuído progressivamente à medida que é alocado para cada filial, garantindo que não haja alocação de estoque superior ao disponível.</li>
           </ul>
-
-          <h3>Resultado</h3>
+          
+          <h3 class="mt-4 text-secondary">Resultado</h3>
           <p>Após a redistribuição, o sistema gera uma tabela com as seguintes informações:</p>
-          <ul>
-            <li>Quantidade de estoque necessária por filial.</li>
-            <li>Quantidade de estoque alocada para cada filial.</li>
-            <li>Estoque restante após a redistribuição.</li>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Quantidade de estoque necessária por filial.</li>
+            <li class="list-group-item">Quantidade de estoque alocada para cada filial.</li>
+            <li class="list-group-item">Estoque restante após a redistribuição.</li>
           </ul>
         </div>
 
         <div class="portfolio-info mt-5">
-          <h2>Importância para os Negócios</h2>
+          <h2 class="text-primary">Importância para os Negócios</h2>
 
-          <h3>1. Eficiência Operacional</h3>
-          <ul>
-            <li>Garante que as filiais com maior demanda tenham estoque suficiente para atender às necessidades, evitando rupturas de estoque.</li>
-            <li>Melhora o controle de estoque, redistribuindo de forma inteligente o estoque existente para otimizar a alocação.</li>
+          <h3 class="mt-4 text-secondary">1. Eficiência Operacional</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Garante que as filiais com maior demanda tenham estoque suficiente para atender às necessidades, evitando rupturas de estoque.</li>
+            <li class="list-group-item">Melhora o controle de estoque, redistribuindo de forma inteligente o estoque existente para otimizar a alocação.</li>
           </ul>
 
-          <h3>2. Gestão de Estoque</h3>
-          <ul>
-            <li>A redistribuição ajuda a evitar superacúmulos de estoque em filiais com estoque excedente, especialmente em filiais de clusters inferiores, liberando recursos para as filiais mais demandadas.</li>
-            <li>A estratégia de priorizar vendas maiores nas filiais do Cluster 1 assegura que os materiais mais necessários sejam enviados primeiro.</li>
+          <h3 class="mt-4 text-secondary">2. Gestão de Estoque</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">A redistribuição ajuda a evitar superacúmulos de estoque em filiais com estoque excedente, liberando recursos para as filiais mais demandadas.</li>
+            <li class="list-group-item">A estratégia de priorizar vendas maiores nas filiais do Cluster 1 assegura que os materiais mais necessários sejam enviados primeiro.</li>
           </ul>
 
-          <h3>3. Tomada de Decisão</h3>
-          <ul>
-            <li>Facilita a tomada de decisões estratégicas sobre redistribuição de estoques, considerando a demanda real de cada filial e evitando a necessidade de compras adicionais em curto prazo.</li>
-            <li>Proporciona um controle mais eficaz sobre o fluxo de materiais, ajudando as áreas de logística a planejar melhor as operações.</li>
+          <h3 class="mt-4 text-secondary">3. Tomada de Decisão</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Facilita a tomada de decisões estratégicas sobre redistribuição de estoques, considerando a demanda real de cada filial e evitando a necessidade de compras adicionais em curto prazo.</li>
+            <li class="list-group-item">Proporciona um controle mais eficaz sobre o fluxo de materiais, ajudando as áreas de logística a planejar melhor as operações.</li>
           </ul>
         </div>
 
         <div class="text-center mt-4">
-          <img src="assets/img/diagram.png" class="img-fluid" alt="Diagrama de Redistribuição de Estoque">
+          <img src="assets/img/diagram.png" class="img-fluid rounded shadow-lg" alt="Diagrama de Redistribuição de Estoque">
           <p class="mt-2"><em>Diagrama representando a redistribuição de estoque entre filiais.</em></p>
         </div>
       </div>
