@@ -1,71 +1,234 @@
-<section id="funcionamento" class="portfolio-details section py-5">
-  <div class="container" data-aos="fade-up">
-    <div class="row gy-4 g-lg-5">
-      
-      <!-- Espaço para Imagem -->
-      <div class="col-lg-12 text-center">
-        <img src="assets/img/banner.png" class="img-fluid rounded shadow-lg" alt="Imagem Ilustrativa">
-        <p class="mt-2"><em>Imagem ilustrativa do processo de redistribuição</em></p>
-      </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-      <div class="col-lg-12">
-        <div class="portfolio-description">
-          <h2 class="text-primary">Como Funciona</h2>
-          
-          <h3 class="mt-4 text-secondary">Leitura de Dados</h3>
-          <p>O código começa com a leitura de várias fontes de dados:</p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Venda de materiais nos últimos 3 meses por filial.</li>
-            <li class="list-group-item">Informações sobre clusters das filiais.</li>
-            <li class="list-group-item">Estoque disponível em cada filial, incluindo o estoque atual e em pedido.</li>
-          </ul>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Redistribuição de Estoque entre Filiais</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-          <h3 class="mt-4 text-secondary">Cálculo da Necessidade de Estoque</h3>
-          <p>Para cada filial do Cluster 1, calcula-se a quantidade de estoque necessária para atender à demanda pelos próximos 7 meses, com base na venda média mensal e no estoque disponível.</p>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-          <h3 class="mt-4 text-secondary">Redistribuição de Estoque</h3>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">O estoque disponível em filiais de clusters inferiores (Cluster 2, 3, etc.) é calculado e somado.</li>
-            <li class="list-group-item">Esse estoque é redistribuído para as filiais do Cluster 1, com prioridade para as lojas com maior venda.</li>
-            <li class="list-group-item">O estoque é diminuído progressivamente à medida que é alocado para cada filial, garantindo que não haja alocação de estoque superior ao disponível.</li>
-          </ul>
-          
-          <h3 class="mt-4 text-secondary">Resultado</h3>
-          <p>Após a redistribuição, o sistema gera uma tabela com as seguintes informações:</p>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Quantidade de estoque necessária por filial.</li>
-            <li class="list-group-item">Quantidade de estoque alocada para cada filial.</li>
-            <li class="list-group-item">Estoque restante após a redistribuição.</li>
-          </ul>
-        </div>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        <div class="portfolio-info mt-5">
-          <h2 class="text-primary">Importância para os Negócios</h2>
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-          <h3 class="mt-4 text-secondary">1. Eficiência Operacional</h3>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Garante que as filiais com maior demanda tenham estoque suficiente para atender às necessidades, evitando rupturas de estoque.</li>
-            <li class="list-group-item">Melhora o controle de estoque, redistribuindo de forma inteligente o estoque existente para otimizar a alocação.</li>
-          </ul>
+  <style>
+    /* Definição da fonte sans-serif para todo o site */
+    body {
+      font-family: sans-serif;
+      color: #333;
+    }
 
-          <h3 class="mt-4 text-secondary">2. Gestão de Estoque</h3>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">A redistribuição ajuda a evitar superacúmulos de estoque em filiais com estoque excedente, liberando recursos para as filiais mais demandadas.</li>
-            <li class="list-group-item">A estratégia de priorizar vendas maiores nas filiais do Cluster 1 assegura que os materiais mais necessários sejam enviados primeiro.</li>
-          </ul>
+    /* Títulos com cores e tamanhos definidos */
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #0f2943;
+    }
 
-          <h3 class="mt-4 text-secondary">3. Tomada de Decisão</h3>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Facilita a tomada de decisões estratégicas sobre redistribuição de estoques, considerando a demanda real de cada filial e evitando a necessidade de compras adicionais em curto prazo.</li>
-            <li class="list-group-item">Proporciona um controle mais eficaz sobre o fluxo de materiais, ajudando as áreas de logística a planejar melhor as operações.</li>
-          </ul>
-        </div>
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #0f2943;
+    }
 
-        <div class="text-center mt-4">
-          <img src="assets/img/diagram.png" class="img-fluid rounded shadow-lg" alt="Diagrama de Redistribuição de Estoque">
-          <p class="mt-2"><em>Diagrama representando a redistribuição de estoque entre filiais.</em></p>
-        </div>
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      color: #0f2943;
+    }
+
+    /* Estilização dos botões */
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    /* Adiciona sombra e borda arredondada para imagens */
+    .img-fluid {
+      border-radius: 8px;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- Cabeçalho centralizado -->
+    <div class="container text-center mt-5">
+      <div class="title-wrapper">
+        <h1>Redistribuição de Estoque entre Filiais pelo Cluster</h1>
+        <p>
+          O código tem como objetivo redistribuir o estoque de materiais entre filiais, priorizando as filiais do Cluster 1 (com maior demanda) e retirando o estoque das filiais com Cluster inferior (Cluster 2 e acima). O sistema calcula a necessidade de estoque de cada filial, comparando o estoque atual e o necessário para atender uma demanda de 7 meses, e então realiza a redistribuição a partir de estoques de outras filiais. Além disso, o código implementa um loop de redistribuição sequencial, onde o estoque total disponível vai sendo diminuído à medida que as quantidades são redistribuídas para as filiais do Cluster 1, garantindo que o estoque disponível seja alocado de forma eficiente.
+        </p>
       </div>
     </div>
-  </div>
-</section>
+
+    <!-- Seção de Detalhes do Projeto -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4 g-lg-5">
+
+          <!-- Coluna com Imagem(s) -->
+          <div class="col-lg-6">
+            <img src="assets/img/diagram.png" class="img-fluid mb-4" alt="Diagrama de Redistribuição">
+            <p class="text-center"><em>Diagrama representando a redistribuição de estoque entre filiais.</em></p>
+          </div>
+
+          <!-- Coluna com Conteúdo -->
+          <div class="col-lg-6">
+            <div class="position-sticky" style="top: 40px">
+              <!-- Como Funciona -->
+              <div class="portfolio-description">
+                <h2>Como Funciona</h2>
+
+                <h3 class="mt-4">Leitura de Dados</h3>
+                <p>O código começa com a leitura de várias fontes de dados:</p>
+                <ul>
+                  <li>Venda de materiais nos últimos 3 meses por filial.</li>
+                  <li>Informações sobre clusters das filiais.</li>
+                  <li>Estoque disponível em cada filial, incluindo o estoque atual e em pedido.</li>
+                </ul>
+
+                <h3 class="mt-4">Cálculo da Necessidade de Estoque</h3>
+                <p>
+                  Para cada filial do Cluster 1, calcula-se a quantidade de estoque necessária para atender à demanda pelos próximos 7 meses, com base na venda média mensal e no estoque disponível.
+                </p>
+
+                <h3 class="mt-4">Redistribuição de Estoque</h3>
+                <ul>
+                  <li>O estoque disponível em filiais de clusters inferiores (Cluster 2, 3, etc.) é calculado e somado.</li>
+                  <li>Esse estoque é redistribuído para as filiais do Cluster 1, com prioridade para as lojas com maior venda.</li>
+                  <li>O estoque é diminuído progressivamente à medida que é alocado para cada filial, garantindo que não haja alocação de estoque superior ao disponível.</li>
+                </ul>
+
+                <h3 class="mt-4">Resultado</h3>
+                <p>Após a redistribuição, o sistema gera uma tabela com as seguintes informações:</p>
+                <ul>
+                  <li>Quantidade de estoque necessária por filial.</li>
+                  <li>Quantidade de estoque alocada para cada filial.</li>
+                  <li>Estoque restante após a redistribuição.</li>
+                </ul>
+              </div>
+
+              <!-- Importância para os Negócios -->
+              <div class="portfolio-info mt-5">
+                <h2>Importância para os Negócios</h2>
+
+                <h3 class="mt-4">1. Eficiência Operacional</h3>
+                <ul>
+                  <li>Garante que as filiais com maior demanda tenham estoque suficiente para atender às necessidades, evitando rupturas de estoque.</li>
+                  <li>Melhora o controle de estoque, redistribuindo de forma inteligente o estoque existente para otimizar a alocação.</li>
+                </ul>
+
+                <h3 class="mt-4">2. Gestão de Estoque</h3>
+                <ul>
+                  <li>A redistribuição ajuda a evitar superacúmulos de estoque em filiais com estoque excedente, liberando recursos para as filiais mais demandadas.</li>
+                  <li>A estratégia de priorizar vendas maiores nas filiais do Cluster 1 assegura que os materiais mais necessários sejam enviados primeiro.</li>
+                </ul>
+
+                <h3 class="mt-4">3. Tomada de Decisão</h3>
+                <ul>
+                  <li>Facilita a tomada de decisões estratégicas sobre redistribuição de estoques, considerando a demanda real de cada filial e evitando a necessidade de compras adicionais em curto prazo.</li>
+                  <li>Proporciona um controle mais eficaz sobre o fluxo de materiais, ajudando as áreas de logística a planejar melhor as operações.</li>
+                </ul>
+              </div>
+
+              <!-- Botões (se necessário) -->
+              <div class="button-group mt-4">
+                <a href="https://link-da-explicacao.com" class="custom-btn">Link da Explicação</a>
+                <a href="https://github.com/SeuProjeto" class="custom-btn">Código Fonte</a>
+                <a href="https://chitodados.github.io/#portfolio" class="custom-btn">Voltar ao Menu Principal</a>
+              </div>
+
+              <style>
+                .button-group {
+                  display: flex;
+                  gap: 15px;
+                  justify-content: center;
+                  margin-top: 20px;
+                }
+
+                .custom-btn {
+                  background: linear-gradient(135deg, #F5DEB3, #D2B48C);
+                  color: #4A362A;
+                  text-decoration: none;
+                  font-weight: bold;
+                  padding: 12px 20px;
+                  border-radius: 8px;
+                  transition: all 0.3s ease-in-out;
+                  font-size: 16px;
+                  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+                }
+
+                .custom-btn:hover {
+                  background: linear-gradient(135deg, #D2B48C, #F5DEB3);
+                  transform: scale(1.05);
+                  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+                }
+              </style>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/lucas-chitolina/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Chitodados"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
