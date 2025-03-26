@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Dashboard - Webscrapping</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Definição da fonte sans-serif para todo o site */
+    body {
+      font-family: sans-serif;
+      color: #333;
+    }
+
+    /* Títulos menores e com cor #0f2943 */
+/* Redução do tamanho dos títulos */
+    h1 {
+      font-size: 22px; /* Antes: 28px */
+      font-weight: 600;
+      color: #0f2943;
+    }
+    
+    h2 {
+      font-size: 20px; /* Antes: 24px */
+      font-weight: 600;
+      color: #0f2943;
+    }
+    
+    h3 {
+      font-size: 18px; /* Antes: 20px */
+      font-weight: 500;
+      color: #0f2943;
+    }
+
+    /* Ajuste dos botões */
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    /* Melhor alinhamento dos botões */
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- Centralizar a introdução -->
+    <div class="container text-center mt-5">
+      <div class="title-wrapper">
+        <h1>Monitoramento e Previsão dos Níveis de Água dos Rios</h1>
+        <p>Sua empresa importa produtos por portos ligados a rios estratégicos. 
+          Alguns desses produtos possuem alta sazonalidade de venda no verão. 
+          No entanto, existe um histórico de redução significativa na cota dos rios devido à seca, 
+          o que pode inviabilizar o transporte por algumas rotas. Diante disso, é essencial monitorar os níveis de água dos rios e projetar tendências
+          futuras para antecipar decisões estratégicas e mitigar riscos</p>
+      </div>
+    </div>
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4 g-lg-5">
+          <div class="col-lg-6">
+            <img src="assets/img/portfolio/Projeto_Dash_Rios/rios.png" class="img-fluid mb-4" alt="">
+            <img src="assets/img/portfolio/Projeto_Dash_Rios/dash4.png" class="img-fluid mb-4" alt="">
+          </div>
+
+          <div class="col-lg-6">
+            <div class="position-sticky" style="top: 40px">
+              <div class="portfolio-description">
+                <h2>Processo proposto:</h2>
+                <ul>
+                  <li>Coleta de dados: Extração automática (web scraping) de informações brutas de uma fonte confiável (Proama Amazonas);</li>
+                  <li>Manipulação e análise: Processamento dos dados, criação de gráficos informativos e automação das análises utilizando Python;</li>
+                  <li>Projeção futura: Aplicação de modelos de séries temporais, como ARIMA, para prever os níveis futuros dos rios;</li>
+                  <li>Deploy dinâmico: Disponibilização das análises e previsões em uma plataforma mais intuitiva e acessível, como um dashboard interativo.</li>
+                </ul>
+
+              </div>
+
+              <div class="portfolio-info mt-5">
+                <h3>Informações do Projeto</h3>
+                <ul>
+                  <li><strong>Categoria:</strong> Web Scraping</li>
+                  <li><strong>Data do Projeto:</strong> 11 Novembro, 2024</li>
+                </ul>
+              </div>
+
+              <!-- Botões lado a lado -->
+              <!-- Botões lado a lado -->
+              <div class="button-group">
+                  <a href="https://dashamazonas.streamlit.app/" class="custom-btn">Visitar Website</a>
+                  <a href="https://github.com/Chitodados/dash_rios/blob/main/webscrapping_dash.py" class="custom-btn">Código Fonte</a>
+                  <a href="https://chitodados.github.io/#portfolio" class="custom-btn">Voltar ao Menu Principal</a>
+              </div>
+              
+              <style>
+                .button-group {
+                    display: flex;
+                    gap: 15px;
+                    justify-content: center;
+                    margin-top: 20px;
+                }
+              
+                .custom-btn {
+                    background: linear-gradient(135deg, #F5DEB3, #D2B48C); /* Gradiente bege */
+                    color: #4A362A; /* Cor do texto */
+                    text-decoration: none;
+                    font-weight: bold;
+                    padding: 12px 20px;
+                    border-radius: 8px;
+                    transition: all 0.3s ease-in-out;
+                    font-size: 16px;
+                    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+                }
+              
+                .custom-btn:hover {
+                    background: linear-gradient(135deg, #D2B48C, #F5DEB3);
+                    transform: scale(1.05);
+                    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+                }
+              </style>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/lucas-chitolina/"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Chitodados"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
